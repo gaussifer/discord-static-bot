@@ -7,13 +7,13 @@ This is the code for running a Discord bot using Python and the discord.py libra
 
 You can use this in two contexts for different reasons:
 
-- In a DM: by writing a private message to the bot, you can ask it to $create a new private group for you. 
+* In a DM: by writing a private message to the bot, you can ask it to $create a new private group for you. 
     This will create a channel in the Private Channels Category.
-- Inside a private channel, the bot has other utilities:
-    - $add/$remove: add/remove members to/from your group.
-    - Check current $members of the group.
-    - $mention (@) all members of the group.
-    - $pin/$unpin$: pin/unpin a selected message.
+* Inside a private channel, the bot has other utilities:
+    * $add/$remove: add/remove members to/from your group.
+    * Check current $members of the group.
+    * $mention (@) all members of the group.
+    * $pin/$unpin$: pin/unpin a selected message.
 
 You can get the list of commands anytime by typing $help either in a DM to the bot 
 or in a private channel (**both contexts have different messages and different commands available**).
@@ -52,12 +52,12 @@ that you need to save verbatim in a file called token.txt
 You also need to invite your bot to your server. For that, go to the OAuth2 tab, 
 enable the Bot scope, and select all permissions you require for your bot.
 For the default functionality shown in this repository, add:
-    - Manage Roles
-    - Manage Channels
-    - View Channels
-    - Send Messages
-    - Manage Messages (for pins)
-    - Read Message History
+* Manage Roles
+* Manage Channels
+* View Channels
+* Send Messages
+* Manage Messages (for pins)
+* Read Message History
 After enabling everything, copy the url at the end of the scopes box
 and paste it into your browser to invite the Bot to your server.
 
@@ -65,31 +65,31 @@ Create a Channel Category with "View Channels" permission set to False by defaul
 Inside, only channels called "static-X" will be located.
 
 You'll also need some special roles in your server:
-    - ADMIN (required): administrator role, to allow its members to perform some extra commands with the bot (delete group, clear, etc.)
-    - BLACKLIST (required): blacklist some users to avoid them using the bot. This role can be empty,
-        but create it to quickly add any problematic members as soon as they abuse the bot.
-    - WHITELIST (optional): if it exists, only members inside this role can use the bot.
-    - ONE_CHANNEL_ROLE_ID (optional): if it exists, it allows you to prevent users from creating infinite channels.
-        The downside is that they won't be able to create more than one channel, 
-        unless and admin removes the role from them every time. 
-        Really recommended to have this role unless you fully trust your members.
+* ADMIN (required): administrator role, to allow its members to perform some extra commands with the bot (delete group, clear, etc.)
+* BLACKLIST (required): blacklist some users to avoid them using the bot. This role can be empty,
+    but create it to quickly add any problematic members as soon as they abuse the bot.
+* WHITELIST (optional): if it exists, only members inside this role can use the bot.
+* ONE_CHANNEL_ROLE_ID (optional): if it exists, it allows you to prevent users from creating infinite channels.
+    The downside is that they won't be able to create more than one channel, 
+    unless and admin removes the role from them every time. 
+    Really recommended to have this role unless you fully trust your members.
 
 You'll need to access Discord ids for the next step. To do that, open your Discord application,
 go to Settings->Advanced and toggle on Developer Mode. Now, you can right-click on any 
 server/channel/message/role/user and get their ids (a long number).
 
 Set the conf.json file with:
-    "GUILD_ID": the id of the server.
-    "CATEGORY_ID": the id of the static channels category. 
-    "ADMIN_ROLE_ID": the id of the "admin" role in the server.
-    "BLACKLIST_ROLE_ID": the id of the blacklist role in the server.
-    "WHITELIST_ROLE_ID": the id of the whitelist role in the server.
-        If null, all members can use the bot.
-    "ONE_CHANNEL_ROLE_ID": the id of the static-leader role. 
-        This is used to block members to create more than 1 channel.
-        To circumvent this restriction, admins can remove the role 
-        from members who requested to create more. 
-        If null, all members can create as many channels as they want.
+* "GUILD_ID": the id of the server.
+* "CATEGORY_ID": the id of the static channels category. 
+* "ADMIN_ROLE_ID": the id of the "admin" role in the server.
+* "BLACKLIST_ROLE_ID": the id of the blacklist role in the server.
+* "WHITELIST_ROLE_ID": the id of the whitelist role in the server.
+    If null, all members can use the bot.
+* "ONE_CHANNEL_ROLE_ID": the id of the static-leader role. 
+    This is used to block members to create more than 1 channel.
+    To circumvent this restriction, admins can remove the role 
+    from members who requested to create more. 
+    If null, all members can create as many channels as they want.
 
 If you don't want to put any id there, fill the value with "null" (without "). 
 
