@@ -92,3 +92,7 @@ Set the conf.json file with:
         If null, all members can create as many channels as they want.
 
 If you don't want to put any id there, fill the value with "null" (without "). 
+
+After all this is done, you can execute the bot by running `python3 bot.py conf.json` in a command-line.
+Note that you need to keep the bot running for it to work. For simple setups, using `tmux` 
+to run the command and detaching from the session might be enough.
