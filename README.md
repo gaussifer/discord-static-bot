@@ -67,6 +67,7 @@ Inside, only channels called "static-X" will be located.
 
 You'll also need some special roles in your server:
 * ADMIN (required): administrator role, to allow its members to perform some extra commands with the bot (delete group, clear, etc.)
+* BOTS (required): bots role. Create a new role for all your bots, so that this bot doesn't count them as members of your channel.
 * BLACKLIST (required): blacklist some users to avoid them using the bot. This role can be empty,
     but create it to quickly add any problematic members as soon as they abuse the bot.
 * WHITELIST (optional): if it exists, only members inside this role can use the bot.
@@ -83,6 +84,7 @@ Set the conf.json file with:
 * "GUILD_ID": the id of the server.
 * "CATEGORY_ID": the id of the static channels category. 
 * "ADMIN_ROLE_ID": the id of the "admin" role in the server.
+* "BOTS_ROLE_ID": the id of the "bots" role in the server.
 * "BLACKLIST_ROLE_ID": the id of the blacklist role in the server.
 * "WHITELIST_ROLE_ID": the id of the whitelist role in the server.
     If null, all members can use the bot.
