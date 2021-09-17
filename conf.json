@@ -1,0 +1,9 @@
+{
+	"GUILD_ID": 0,
+	"CATEGORY_ID": 0,
+	"ADMIN_ROLE_ID": 0,
+	"BOTS_ROLE_ID": 0,
+	"BLACKLIST_ROLE_ID": null,
+	"WHITELIST_ROLE_ID": null,
+	"ONE_CHANNEL_ROLE_ID": null
+}
