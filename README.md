@@ -13,7 +13,7 @@ You can use this in two contexts for different reasons:
     * $add/$remove: add/remove members to/from your group.
     * Check current $members of the group.
     * $mention (@) all members of the group.
-    * $pin/$unpin$: pin/unpin a selected message.
+    * $pin/$unpin: pin/unpin a selected message.
 
 You can get the list of commands anytime by typing $help either in a DM to the bot 
 or in a private channel (**both contexts have different messages and different commands available**).
