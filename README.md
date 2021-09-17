@@ -46,8 +46,9 @@ feel free to edit the code and add as much as you need.
 
 Create your own bot in https://discord.com/developers/applications
 For that, you need an application, create a bot in the Bot section,
-and generate a private token for your bot, 
-that you need to save verbatim in a file called token.txt
+uncheck the "PUBLIC BOT" option and check the "SERVER MEMBERS INTENT" option.
+Finally, click the "Copy" button up on the Token section (next to the avatar). 
+Save that token verbatim in a file called token.txt right on the bot folder.
 
 You also need to invite your bot to your server. For that, go to the OAuth2 tab, 
 enable the Bot scope, and select all permissions you require for your bot.
